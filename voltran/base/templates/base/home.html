@@ -1,11 +1,26 @@
-{% extends 'base/main.html' %}
+{% extends 'base/main.html' %} {% block content %}
 
-{% block content %}
-
-
-<h1>Home</h1>
+<div class="aboutus-box">
+  <h1 class="aboutus-title">Hakkımızda</h1>  
+  <h2 class="aboutus-text">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor doloremque
+    corporis, quod distinctio dolorum veniam consectetur reprehenderit, nulla
+    voluptas totam voluptatum magni illum minus qui aliquid animi, nostrum
+    cumque aliquam.
+  </h2>
+</div>
 {% for m in members %}
-<div>{{m.first_name}} {{m.last_name}}: <br>{{m.description}}</div>
-{% endfor %}
+<div>{{m.first_name}} {{m.last_name}}: <br />{{m.description}}</div>
 
-{% endblock content %}
+{% endfor %} 
+<style>
+    .aboutus-box{
+        background-color: #202020;
+        margin: 1rem;
+        border-radius: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+</style>{% endblock content %}
+
+

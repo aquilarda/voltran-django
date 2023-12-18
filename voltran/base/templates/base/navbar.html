@@ -1,2 +1,45 @@
-<h1>navbar placeholder (included in main.html)</h1>
-<hr>
+<div class="navbar">
+  <div class="navbar-left">
+    <div class="navbar-item"><a href="{% url 'home' %}">Voltran</a></div>
+  </div>
+  <div class="navbar-right">
+    <div class="navbar-item"><a href="{% url 'log' %}">Günlük</a></div>
+    <div class="navbar-item"><a href="{% url 'members' %}">Üyeler</a></div>
+  </div>
+</div>
+
+<style>
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #202020;
+    border-radius: 1rem;
+    margin: 1rem;
+    font-size: x-large;
+  }
+  .navbar-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .navbar-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .navbar-item {
+    margin: 1rem;
+  }
+  @media only screen and (max-width: 600px) {
+    .navbar{
+      font-size: medium;
+    }
+  }
+  @media only screen and (max-width: 300px) {
+    .navbar{
+      font-size: small;
+    }
+  }
+</style>
