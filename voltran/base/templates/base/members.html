@@ -1,29 +1,38 @@
-{% extends 'base/main.html' %}
-
-{% block content %}
-
+{% extends 'base/main.html' %} {% block content %}
 
 <div class="members-box">
-    <div class="members-title"><h1>Üyelerimiz</h1></div> <hr> <hr>
-    {% for m in members%}
-    <div class="member-name">
-        <h2>{{m.first_name}} {{m.last_name}}</h2>
-    </div>
-    <div class="member-description">
-        <h3>{{m.description}}</h3> <hr>
-    </div>
-    {% endfor %}
+  <div class="members-title"><h1>Üyelerimiz</h1></div>
+  <hr />
+  <hr />
+  {% for m in members%}
+  <div class="member-name">
+    <h2>{{m.first_name}} {{m.last_name}}</h2>
+  </div>
+  <div class="member-description">
+    <h3>{{m.description}}</h3>
+    <hr />
+  </div>
+  {% endfor %}
 </div>
 
 <style>
-    .members-box{
-        background-color: #202020;
-        margin: 1rem;
-        border-radius: 1rem;
-        padding: 1rem;
-        text-align: center;
+  .members-box {
+    background-color: #202020;
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  @media only screen and (max-width: 600px) {
+    .members-box {
+      font-size: medium;
     }
+  }
+  @media only screen and (max-width: 300px) {
+    .members-box {
+      font-size: small;
+    }
+  }
 </style>
 
 {% endblock content %}
-
