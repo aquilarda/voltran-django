@@ -56,7 +56,7 @@ ROOT_URLCONF = 'voltran.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["voltran/base/templates/base"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

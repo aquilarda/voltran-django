@@ -1,8 +1,11 @@
 from django.shortcuts import render
+from base.models import Member, Project, Log
 
 
 def home(request):
-    return render(request, 'base/home.html')
+    members = Member.objects.all()
+    context = {"members": members}
+    return render(request, 'base/home.html', context)
 
 
 def members(request):

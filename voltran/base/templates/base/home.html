@@ -4,5 +4,8 @@
 
 
 <h1>Home</h1>
+{% for m in members %}
+<div>{{m.first_name}} {{m.last_name}}: <br>{{m.description}}</div>
+{% endfor %}
 
 {% endblock content %}
