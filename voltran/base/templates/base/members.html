@@ -3,6 +3,27 @@
 {% block content %}
 
 
-<h1>Members</h1>
+<div class="members-box">
+    <div class="members-title"><h1>Üyelerimiz</h1></div> <hr> <hr>
+    {% for m in members%}
+    <div class="member-name">
+        <h2>{{m.first_name}} {{m.last_name}}</h2>
+    </div>
+    <div class="member-description">
+        <h3>{{m.description}}</h3> <hr>
+    </div>
+    {% endfor %}
+</div>
+
+<style>
+    .members-box{
+        background-color: #202020;
+        margin: 1rem;
+        border-radius: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+</style>
 
 {% endblock content %}
+

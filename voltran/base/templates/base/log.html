@@ -3,8 +3,33 @@
 {% block content %}
 
 
+<div class="logs-box">
+    <h1 class="logs-title-log">Günlük</h1> <hr> <hr>
+    {% for l in logs %}
+    <h2 class="logs-title">{{l.title}}</h2>
+    <h3 class="logs-text">{{l.description}}</h3>
+    <h5 class="logs-date">{{l.date}}</h5> <hr>
+    {% endfor %}
+</div>
 
-<h1>Log</h1>
-
+<style>
+    .logs-box{
+        background-color: #202020;
+        margin: 1rem;
+        border-radius: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+    @media only screen and (max-width: 600px) {
+    .logs-box{
+      font-size: medium;
+    }
+  }
+  @media only screen and (max-width: 300px) {
+    .logs-box{
+      font-size: small;
+    }
+  }
+</style>
 
 {% endblock content %}

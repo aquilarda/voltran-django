@@ -3,14 +3,18 @@ from base.models import Member, Project, Log
 
 
 def home(request):
-    members = Member.objects.all()
-    context = {"members": members}
+    projects = Project.objects.all()
+    context = {"projects": projects}
     return render(request, 'base/home.html', context)
 
 
 def members(request):
-    return render(request, 'base/members.html')
+    members = Member.objects.all()
+    context = {"members": members}
+    return render(request, 'base/members.html', context)
 
 
 def log(request):
-    return render(request,'base/log.html')
+    logs = Log.objects.all()
+    context = {"logs": logs}
+    return render(request,'base/log.html', context)
