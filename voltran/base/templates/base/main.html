@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="voltran.ico">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'images/favicon.ico' %}"
+    />
     <title>Voltran</title>
-</head>
-<body>
-
-    {% include 'base/navbar.html' %}
-
-    {% block content %}
+  </head>
+  <body>
+    {% include 'base/navbar.html' %} {% block content %}
     <!-- Your content goes here -->
-    {% endblock %}
-
-    {%include 'base/footer.html' %}
+    {% endblock %} {%include 'base/footer.html' %}
 
     <style>
-        body{
-            background-color: #86BBBD;
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-decoration: none;
-            user-select: none;
-        }
-        a{
-            color: white;
-            user-select: none;
-            text-decoration: none;
-        }
-        hr{
-            color: white;
-        }
+      body {
+        background-color: #86bbbd;
+        color: white;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+        user-select: none;
+      }
+      a {
+        color: white;
+        user-select: none;
+        text-decoration: none;
+      }
+      hr {
+        color: white;
+      }
     </style>
- 
-</body>
+  </body>
 </html>
