@@ -11,7 +11,7 @@
 </div>
 
 <div class="projects-box">
-    <div class="projects-title"><h1>Projelerimiz</h1></div>
+    <div class="projects-title"><h1>Projelerimiz</h1></div> <hr>
     <div class="projects">
         {% for p in projects %}
         <div><h1>{{p.project_title}}</h1> <br><h2>{{p.project_description}}</h2></div> <hr>
@@ -21,15 +21,15 @@
 
 <style>
     .aboutus-box{
-        background-color: #6A6B83;
-        margin: 1rem;
+        background-color: #161616;
+        margin: 3rem;
         border-radius: 1rem;
         padding: 1rem;
         text-align: center;
     }
     .projects-box{
-        background-color: #6A6B83;
-        margin: 1rem;
+        background-color: #161616;
+        margin: 3rem;
         border-radius: 1rem;
         padding: 1rem;
         text-align: center;
@@ -37,21 +37,25 @@
     @media only screen and (max-width: 600px) {
     .aboutus-box{
       font-size: medium;
+      margin: 1rem;
     }
   }
   @media only screen and (max-width: 300px) {
     .aboutus-box{
       font-size: small;
+      margin: 1rem;
     }
   }
   @media only screen and (max-width: 600px) {
     .projects-box{
       font-size: medium;
+      margin: 1rem;
     }
   }
   @media only screen and (max-width: 300px) {
     .projects-box{
       font-size: small;
+      margin: 1rem;
     }
   }
 </style>{% endblock content %}

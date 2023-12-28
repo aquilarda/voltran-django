@@ -4,7 +4,7 @@
 
 
 <div class="logs-box">
-    <h1 class="logs-title-log">Günlük</h1> <hr> <hr>
+    <h1 class="logs-title-log">Günlük</h1> <hr>
     {% for l in logs %}
     <h2 class="logs-title">{{l.title}}</h2>
     <h3 class="logs-text">{{l.description}}</h3>
@@ -14,8 +14,8 @@
 
 <style>
     .logs-box{
-        background-color: #6A6B83;
-        margin: 1rem;
+        background-color: #161616;
+        margin: 3rem;
         border-radius: 1rem;
         padding: 1rem;
         text-align: center;
@@ -23,11 +23,13 @@
     @media only screen and (max-width: 600px) {
     .logs-box{
       font-size: medium;
+      margin: 1rem;
     }
   }
   @media only screen and (max-width: 300px) {
     .logs-box{
       font-size: small;
+      margin: 1rem;
     }
   }
 </style>
