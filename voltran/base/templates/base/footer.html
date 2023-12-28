@@ -3,7 +3,7 @@
     <div class="footer-item"><a href="{% url 'home' %}">Voltran</a></div>
   </div>
   <div class="footer-right">
-    <div class="footer-item">contact@voltran.com</div>
+    <div class="footer-item">bulentaltinbt@gmail.com</div>
   </div>
 </div>
 
@@ -20,12 +20,18 @@
   }
   .footer-item{
     margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+  .footer-item:hover{
+    background-color: #161616;
   }
   @media only screen and (max-width: 600px) {
     .footer{
       font-size: medium;
       flex-direction: column;
       margin: 1rem;
+      padding: 0rem;
     }
   }
   @media only screen and (max-width: 300px) {
@@ -33,6 +39,7 @@
       font-size: small;
       flex-direction: column;
       margin: 1rem;
+      padding: 0rem;
     }
   }
 </style>

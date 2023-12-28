@@ -1,63 +1,70 @@
 {% extends 'base/main.html' %} {% block content %}
 
 <div class="aboutus-box">
-  <h1 class="aboutus-title">Hakkımızda</h1>  
+  <h1 class="aboutus-title">Hakkımızda</h1>
   <h2 class="aboutus-text">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor doloremque
-    corporis, quod distinctio dolorum veniam consectetur reprehenderit, nulla
-    voluptas totam voluptatum magni illum minus qui aliquid animi, nostrum
-    cumque aliquam.
+    Merhaba! Biz, Tuğba Özbek Anadolu Lisesi öğrencilerinden oluşan Voltran takımıyız.
+    Teknolojiye olan tutkumuz ve sıkı arkadaşlık bağlarımızla bir araya gelen
+    takımımız, hem Teknofest hem de FLL (First Lego League) gibi önemli yarışmalarda
+    başarılar aldı ve almaya devam edecek. Okulumuz, bize sağladığı destekle birlikte, takım
+    çalışmasına ve teknolojiye olan ilgimize katkı sağlıyor. Voltran olarak
+    amacımız, yenilikçi projelerle topluma fayda sağlamak ve birlikte
+    geçirdiğimiz her anı değerli kılmak.
   </h2>
 </div>
 
 <div class="projects-box">
-    <div class="projects-title"><h1>Projelerimiz</h1></div> <hr>
-    <div class="projects">
-        {% for p in projects %}
-        <div><h1>{{p.project_title}}</h1> <br><h2>{{p.project_description}}</h2></div> <hr>
-        {% endfor %}
+  <div class="projects-title"><h1>Projelerimiz</h1></div>
+  <hr />
+  <div class="projects">
+    {% for p in projects %}
+    <div>
+      <h1>{{p.project_title}}</h1>
+      <br />
+      <h2>{{p.project_description}}</h2>
     </div>
+    <hr />
+    {% endfor %}
+  </div>
 </div>
 
 <style>
-    .aboutus-box{
-        background-color: #161616;
-        margin: 3rem;
-        border-radius: 1rem;
-        padding: 1rem;
-        text-align: center;
-    }
-    .projects-box{
-        background-color: #161616;
-        margin: 3rem;
-        border-radius: 1rem;
-        padding: 1rem;
-        text-align: center;
-    }
-    @media only screen and (max-width: 600px) {
-    .aboutus-box{
+  .aboutus-box {
+    background-color: #161616;
+    margin: 3rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  .projects-box {
+    background-color: #161616;
+    margin: 3rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  @media only screen and (max-width: 600px) {
+    .aboutus-box {
       font-size: medium;
       margin: 1rem;
     }
   }
   @media only screen and (max-width: 300px) {
-    .aboutus-box{
+    .aboutus-box {
       font-size: small;
       margin: 1rem;
     }
   }
   @media only screen and (max-width: 600px) {
-    .projects-box{
+    .projects-box {
       font-size: medium;
       margin: 1rem;
     }
   }
   @media only screen and (max-width: 300px) {
-    .projects-box{
+    .projects-box {
       font-size: small;
       margin: 1rem;
     }
-  }
-</style>{% endblock content %}
-
-
+  }</style
+>{% endblock content %}
